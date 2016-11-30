@@ -19,7 +19,7 @@ int main()
 	setegid(0);
 	setgid(0);
 
-	// fork off from dnsmasq
+	// fork off from run-as
   	if(fork())
     	return 0;
 

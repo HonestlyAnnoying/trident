@@ -2,13 +2,13 @@ all: build-all
 
 # compile the binaries
 obj/local/arm64-v8a/reverse: 
-	ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=arm64-v8a reverse
+	/Users/fredofosco/Desktop/android-ndk-r13/ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=arm64-v8a reverse
 
 obj/local/arm64-v8a/load: 
-	ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=arm64-v8a load
+	/Users/fredofosco/Desktop/android-ndk-r13/ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=arm64-v8a load
 
 obj/local/arm64-v8a/stage:
-	ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=arm64-v8a stage
+	/Users/fredofosco/Desktop/android-ndk-r13/ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk APP_ABI=arm64-v8a stage
 
 # pseudo instruction to perform stage, load and reverse stages.
 build-all: obj/local/arm64-v8a/reverse obj/local/arm64-v8a/stage obj/local/arm64-v8a/load
